@@ -1,0 +1,12 @@
+{
+   "name": "Class",
+   "platform": "Windows",
+   "version": "0.3.1",
+   "path": "WindowsNoEditor/Holodeck/Binaries/Win64/Holodeck.exe",
+   "worlds": [
+      {
+         "name" : "Rooms",
+         "pre_start_steps": 8
+      }
+   ]
+}
