@@ -33,7 +33,8 @@ void ATurtleAgent::Tick(float DeltaSeconds) {
 	FVector LocalTorque = FVector(0, 0, YawTorqueToApply);
 	LocalTorque = ConvertTorque(LocalTorque, ClientToUE);
 
-	RootMesh->AddTorqueInRadians(GetActorRotation().RotateVector(LocalTorque));
+	//RootMesh->AddTorqueInRadians(GetActorRotation().RotateVector(LocalTorque));
+	AddActorLocalRotation(FRotator(0, YawTorqueToApply, 0), false, 0, ETeleportType::None);
 	RootMesh->AddForce(GetActorRotation().RotateVector(LocalThrust));
 
 	// If the turtle is upside down it is abused
